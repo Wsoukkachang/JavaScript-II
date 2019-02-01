@@ -58,21 +58,21 @@ multiplyNums(3, 4, function(multiply) {
 });
 
 function contains(item, list, cb) {
+
+  const newItem = (`'${item}'`);
+
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  
-  for (let i = 0; i < list.length, i++) {
-    if ( list[i] === item ) {
-       return cb(true);
-      }
-      
-      else { 
-        return cb(false); 
-      }
-    }
-  }
 
-contains(Gum, items, function(contain) {
+  if (newItem === list.includes(item)) {
+    return cb(true);
+  }
+  else { 
+    return cb(false); 
+  }
+}
+
+contains('Pencil', items, function(contain) {
   console.log(contain)
 });
 
