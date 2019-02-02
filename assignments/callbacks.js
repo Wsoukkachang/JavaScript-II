@@ -26,7 +26,7 @@ function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
     return cb(arr.length);
   }
-  
+
   getLength(items, function(length) {
     console.log(length)
   });
@@ -72,8 +72,19 @@ contains('Gum', items, function(contain) {
 
 /* STRETCH PROBLEM */
 
-// function removeDuplicates(array, cb) {
-//   // removeDuplicates removes all duplicate values from the given array.
-//   // Pass the duplicate free array to the callback function.
-//   // Do not mutate the original array.
-// }
+const duplicateItems = ['Pencil', 'Gum', 'Notebook', 'yo-yo', 'Gum', 'Pencil'];
+let noDuplicateItems = [];
+
+function removeDuplicates(arr, cb) {
+  // removeDuplicates removes all duplicate values from the given array.
+  // Do not mutate the original array.
+
+  let noDuplicateItems = arr.filter(function(elem, index, self) {
+        return index == self.indexOf(elem);
+    });
+    return cb(noDuplicateItems);  // Pass the duplicate free array to the callback function.
+}
+
+removeDuplicates(duplicateItems, function(duplicates) {
+  console.log(duplicates)
+});

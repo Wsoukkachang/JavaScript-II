@@ -183,11 +183,8 @@ console.log(groupedPeople);
 
 // Working on showing donations for each company
 
-// debugger;
-// let  totalDonationsPerCompany = groupedPeople.object.item.array.donation.reduce(function (accumulator, currentValue) {
-//     return accumulator + currentValue.donation;
-//   }, 0);
+let  totalDonationsPerCompany = groupedPeople.array.object.donation.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue.donation;
+  }, 0);
 
-// debugger;
-
-// console.log(totalDonationsPerCompany);
+console.log(totalDonationsPerCompany);
