@@ -68,7 +68,7 @@ console.log(fullName);
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 
-let allCaps = runners.map( function(item, index) {
+let allCaps = runners.map( function(item) {
     return item.first_name.toUpperCase();
 });
 
@@ -181,9 +181,13 @@ let groupedPeople = groupBy(runners, 'company_name');
 //List companies and how many employees that donated in each
 console.log(groupedPeople);
 
-//Working on showing donations for each company
-// let  totalDonationsPerCompany = groupedPeople.reduce(function (accumulator, currentValue) {
+// Working on showing donations for each company
+
+// debugger;
+// let  totalDonationsPerCompany = groupedPeople.object.item.array.donation.reduce(function (accumulator, currentValue) {
 //     return accumulator + currentValue.donation;
 //   }, 0);
 
-//   console.log(totalDonationsPerCompany);
+// debugger;
+
+// console.log(totalDonationsPerCompany);
